@@ -1,0 +1,12 @@
+.profile__info {
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .profile__info {
+    max-width: 282px;
+    gap: 10px;
+    transform: translateX(14px);
+  }
+}

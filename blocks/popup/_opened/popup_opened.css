@@ -1,0 +1,19 @@
+.popup_opened {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity visibility 0.3s transform 0.3s;
+  animation: open 0.3s ease;
+}
+
+@keyframes open {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
