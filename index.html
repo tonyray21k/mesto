@@ -10,64 +10,64 @@
 
 <body class="root">
   <header class="header">
-    <img src="./images/Logo_mesto.png" alt="лого" class="header__logo">
+    <img src="./images/Logo_mesto.svg" alt="лого" class="header__logo">
   </header>
 
 
   <main class="content">
     <section class="profile">
-      <img src="./images/JAK-IV Kysto.png" alt="Аватарка Жака" class="profile__avatar">
+      <img src="./images/JAK-IV.svg" alt="Аватарка Жака" class="profile__avatar">
       <div class="profile__info">
         <div class="profile__author">
           <h1 class="profile__author-name">Жак-Ив Кусто</h1>
           <p class="profile__author-info">Исследователь океана</p>
         </div>
-        <div class="profile__edit-button"></div>
+        <div type="button" class="profile__edit-button"></div>
       </div>
-      <div class="profile__button"></div>
+      <div type="button" class="profile__button"></div>
     </section>
 
     <section class="elements">
       <div class="elements__element">
-        <img src="./images/karachevok.png" alt="Картинка Карачаевск" class="elements__pic">
+        <img src="./images/karachevsk.svg" alt="Картинка Карачаевск" class="elements__pic">
         <div class="elements__card">
           <h2 class="elements__card-name">Карачаевск</h2>
-          <div class="elements__card-button"></div>
+          <div type="button" class="elements__card-button"></div>
         </div>
       </div>
       <div class="elements__element">
-        <img src="./images/Ilbrus.png" alt="Картинка Гора Эльбрус" class="elements__pic">
+        <img src="./images/Ilbrus.svg" alt="Картинка Гора Эльбрус" class="elements__pic">
         <div class="elements__card">
           <h2 class="elements__card-name">Гора Эльбрус</h2>
-          <div class="elements__card-button"></div>
+          <div type="button" class="elements__card-button"></div>
         </div>
       </div>
       <div class="elements__element">
-        <img src="./images/Dombai.png" alt="Картинка Домбай" class="elements__pic">
+        <img src="./images/Dombai.svg" alt="Картинка Домбай" class="elements__pic">
         <div class="elements__card">
           <h2 class="elements__card-name">Домбай</h2>
-          <div class="elements__card-button"></div>
+          <div type="button" class="elements__card-button"></div>
         </div>
       </div>
       <div class="elements__element">
-        <img src="./images/Ilbrus.png" alt="Картинка Гора Эльбрус" class="elements__pic">
+        <img src="./images/Ilbrus.svg" alt="Картинка Гора Эльбрус" class="elements__pic">
         <div class="elements__card">
           <h2 class="elements__card-name">Гора Эльбрус</h2>
-          <div class="elements__card-button"></div>
+          <div type="button" class="elements__card-button"></div>
         </div>
       </div>
       <div class="elements__element">
-        <img src="./images/Dombai.png" alt="Картинка Домбай" class="elements__pic">
+        <img src="./images/Dombai.svg" alt="Картинка Домбай" class="elements__pic">
         <div class="elements__card">
           <h2 class="elements__card-name">Домбай</h2>
-          <div class="elements__card-button"></div>
+          <div type="button" class="elements__card-button"></div>
         </div>
       </div>
       <div class="elements__element">
-        <img src="./images/karachevok.png" alt="Картинка Карачаево-Черкессия" class="elements__pic">
+        <img src="./images/karachevsk.svg" alt="Картинка Карачаево-Черкессия" class="elements__pic">
         <div class="elements__card">
           <h2 class="elements__card-name">Карачаево-Черкессия</h2>
-          <div class="elements__card-button"></div>
+          <div type="button" class="elements__card-button"></div>
         </div>
       </div>
     </section>
@@ -81,11 +81,11 @@
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
       <form action="" class="popup__fields">
-        <input type="text" placeholder=" " class="popup__text popup__text_name">
-        <input type="text" placeholder=" " class="popup__text popup__text_info">
+        <input name="popup-input" type="text" placeholder=" " class="popup__text popup__text_name">
+        <input name="popup-input" type="text" placeholder=" " class="popup__text popup__text_info">
         <button type="submit" class="popup__save-button">Сохранить</button>
       </form>
-      <div class="popup__close-button"></div>
+      <div type="button" class="popup__close-button" name="popup-submit-form"></div>
     </div>
   </sectiion>
   <script src="./scripts/index.js"></script>

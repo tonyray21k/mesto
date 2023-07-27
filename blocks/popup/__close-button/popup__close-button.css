@@ -3,11 +3,11 @@
   height: 32px;
   top: -40px;
   right: -40px;
-  background-image: url(../);
+  background-image: url(../../../images/popup_close.svg);
   background-repeat: no-repeat;
   position: absolute;
   border: none;
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
   padding: 0;
   cursor: pointer;
 }

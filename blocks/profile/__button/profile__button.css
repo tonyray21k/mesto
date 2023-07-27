@@ -3,7 +3,7 @@
   height: 50px;
   padding: 0;
   margin-left: auto;
-  background-image: url(../../../images/add.png);
+  background-image: url(../../../images/Add_Button.svg);
   background-position: center;
   background-repeat: no-repeat;
   align-self: center;
@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 900px) {
   .profile__button {
-    background-image: url(../../../images/add_small.png);
+    background-image: url(../../../images/add_small.svg);
     width: 100%;
   }
 }
