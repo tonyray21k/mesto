@@ -4,10 +4,12 @@
   top: -40px;
   right: -40px;
   background-image: url(../../../images/popup_close.svg);
+  /* ИСПРАВИЛ */
   background-repeat: no-repeat;
   position: absolute;
   border: none;
   background-color: rgba(0, 0, 0, 0);
+  /* ИСПРАВИЛ */
   padding: 0;
   cursor: pointer;
 }

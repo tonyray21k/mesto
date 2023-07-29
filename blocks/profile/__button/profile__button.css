@@ -9,7 +9,8 @@
   align-self: center;
   border: 2px solid #FFFFFF;
   border-radius: 2px;
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
+  /* ИСПРАВИЛ */
 }
 
 .profile__button:hover {
