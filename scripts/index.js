@@ -32,4 +32,3 @@ editButton.addEventListener('click', popupOpen)
 closeButton.addEventListener('click', popupClose)
 formElement.addEventListener('submit', handleFormSubmit);
 
-// Крутые исправления, который сломали мне JS:)
