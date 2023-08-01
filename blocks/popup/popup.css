@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: #0000;
   opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* если поставить opacity 0.50 как в figma и сделать black то полностью будет затемняться */
 }
