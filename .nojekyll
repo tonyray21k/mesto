@@ -1,0 +1,9 @@
+pwd
+C:\Users\Dife\Documents\GitHub\mesto
+
+git branch
+* main
+develop
+
+touch .nojekyll
+git add . && git commit -m "added nojekyll" 
