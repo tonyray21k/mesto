@@ -16,7 +16,7 @@
 
   <main class="content">
     <section class="profile">
-      <img src="./images/Logo_D.svg" alt="Аватарка профиля" class="profile__avatar">
+      <img src="./images/pajiloi_krol.png" alt="Аватарка профиля" class="profile__avatar">
       <div class="profile__info">
         <div class="profile__author">
           <h1 class="profile__author-name">Жак-Ив Кусто</h1>
@@ -28,48 +28,7 @@
     </section>
 
     <section class="elements">
-      <div class="elements__element">
-        <img src="./images/karachevsk.png" alt="Картинка Карачаевск" class="elements__pic">
-        <div class="elements__card">
-          <h2 class="elements__card-name">Карачаевск</h2>
-          <button class="elements__card-button" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img src="./images/Ilbrus.png" alt="Картинка Гора Эльбрус" class="elements__pic">
-        <div class="elements__card">
-          <h2 class="elements__card-name">Гора Эльбрус</h2>
-          <button class="elements__card-button" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img src="./images/Dombai.svg" alt="Картинка Домбай" class="elements__pic">
-        <div class="elements__card">
-          <h2 class="elements__card-name">Домбай</h2>
-          <button class="elements__card-button" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img src="./images/Ilbrus.png" alt="Картинка Гора Эльбрус" class="elements__pic">
-        <div class="elements__card">
-          <h2 class="elements__card-name">Гора Эльбрус</h2>
-          <button class="elements__card-button" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img src="./images/Dombai.svg" alt="Картинка Домбай" class="elements__pic">
-        <div class="elements__card">
-          <h2 class="elements__card-name">Домбай</h2>
-          <button class="elements__card-button" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img src="./images/karachevsk.png" alt="Картинка Карачаево-Черкессия" class="elements__pic">
-        <div class="elements__card">
-          <h2 class="elements__card-name">Карачаево-Черкессия</h2>
-          <button class="elements__card-button" type="button"></button>
-        </div>
-      </div>
+
     </section>
   </main>
   <footer class="footer">
@@ -79,14 +38,37 @@
   <section class="popup">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__fields" name="popup-submit-form">
+      <form class="popup__fields" name="popup-submit-form" id="popupForm" action=''>
         <input name="popup-input" type="text" placeholder=" " class="popup__text popup__text_form_name">
         <input name="popup-input" type="text" placeholder=" " class="popup__text popup__text_form_info">
         <button type="submit" class="popup__save-button">Сохранить</button>
       </form>
-      <button class="popup__close-button" name="popup-submit-form" type="button"></button>
+      <button class="popup__close-button" type="button"></button>
     </div>
   </section>
+
+  <div class="popup" id="add-popup">
+    <div class="popup__container">
+      <h2 class="popup__title">Новое место</h2>
+      <form id="FormAdd" action="" name="FormAdd" class="popup__fields">
+        <input name="Imgname" type="text" id="Name" placeholder="Название" class="popup__text popup__text_form_name">
+        <input name="Imgurl" type="url" id="Link" placeholder="Ссылка на картинку"
+          class="popup__text popup__text_form_img">
+        <button id="add-popup__save-button" type="submit" class="popup__save-button">Создать</button>
+      </form>
+      <button id="add-popup__close-button" type="button" class="popup__close-button"></button>
+    </div>
+  </div>
+
+  <template class="elements__element-template">
+    <div class="elements__element">
+      <img class="elements__pic" src="">
+      <div class="elements__card">
+        <h2 class="elements__card-name"></h2>
+        <button class="elements__card-button"></button>
+      </div>
+    </div>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
 
