@@ -33,7 +33,7 @@
 @import url(../blocks/elements/__card-button/elements__card-button.css);
 @import url(../blocks/elements/__pic/elements__pic.css);
 @import url(../blocks/elements/__card-button/_active/elements__card-button_active.css);
-
+@import url(../blocks/elements/__delete-button/elements__delete-button.css);
 /* footer */
 
 @import url(../blocks/footer/footer.css);
@@ -48,3 +48,6 @@
 @import url(../blocks/popup/__save-button/popup__save-button.css);
 @import url(../blocks/popup/__text/popup__text.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__image-name/popup__image-name.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__img/popup__img.css);

@@ -47,6 +47,11 @@ let elementName = addPopup.querySelector('.popup__text_form_name')
 let elementImg = addPopup.querySelector('.popup__text_form_img')
 let newCardBtn = addPopup.querySelector('#add-popup__save-button')
 let CloseBtnPopup = addPopup.querySelector('#add-popup__close-button')
+let imgPopup = document.querySelector('#img-popup')
+let imgName = imgPopup.querySelector('.popup__image-name')
+let imgPopupCloseBtn = imgPopup.querySelector('#img-popup__close-button')
+let PopupImage = imgPopup.querySelector('.popup__image')
+
 
 let startCards = initialCards.map(({ name, link }) => createElement(name, link));
 Elements.prepend(...startCards);
@@ -83,6 +88,7 @@ function renderElements(name, link) {
 function addEl(evt) {
   evt.preventDefault();
   renderElements(elementName.value, elementImg.value);
+  FormAdd.reset();
   addPopupClose();
 }
 
@@ -99,20 +105,51 @@ function createEl(name, link) {
   return cardEl;
 }
 
-function createElement(name, link) {
-  const cardEl = reternEl(name, link);
+function imgPopupOpen() {
+  imgPopup.classList.add('popup_opened');
+}
 
-  const likeButton = cardEl.querySelector('.elements__card-button');
+function imgPopupClose() {
+  imgPopup.classList.remove('popup_opened')
+}
+
+function createElement(name, link) {
+  let cardEl = reternEl(name, link);
+
+  let likeButton = cardEl.querySelector('.elements__card-button');
   likeButton.addEventListener('click', () => {
     likeButton.classList.toggle('elements__card-button_active');
   });
   return cardEl;
 }
+function setupCardListeners(cardEl, name, link) {
+  cardEl.querySelector('.elements__delete-button').addEventListener('click', () => {
+    cardEl.remove();
+  });
+
+  cardEl.querySelector('.elements__pic').addEventListener('click', () => {
+    imgName.textContent = name;
+    PopupImage.src = link;
+    PopupImage.alt = name;
+    imgPopupOpen();
+  });
+}
+
+const cardElements = document.querySelectorAll('.elements__element');
+
+cardElements.forEach(cardElement => {
+  const cardName = cardElement.querySelector('.elements__card-name').textContent;
+  const cardLink = cardElement.querySelector('.elements__pic').src;
+
+  setupCardListeners(cardElement, cardName, cardLink);
+});
 
 editButton.addEventListener('click', popupOpen)
 closeButton.addEventListener('click', popupClose)
-formElement.addEventListener('submit', handleFormSubmit);
 addButton.addEventListener('click', addPopupOpen);
 addcloseButton.addEventListener('click', addPopupClose);
 FormAdd.addEventListener('submit', addEl);
+formElement.addEventListener('submit', handleFormSubmit);
+imgPopupCloseBtn.addEventListener('click', imgPopupClose)
+
 
