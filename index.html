@@ -30,41 +30,40 @@
     <section class="elements">
 
     </section>
+
   </main>
   <footer class="footer">
     <p class="footer__copyright">© 2023 Mesto Russia</p>
   </footer>
-
-  <section class="popup">
+  <div class="popup" id="edit-popup">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__fields" name="popup-submit-form" id="popupForm" action=''>
-        <input name="popup-input" type="text" placeholder=" " class="popup__text popup__text_form_name">
-        <input name="popup-input" type="text" placeholder=" " class="popup__text popup__text_form_info">
-        <button type="submit" class="popup__save-button">Сохранить</button>
+      <form name="popup-form" class="popup__fields">
+        <input type="text" placeholder="Имя" class="popup__text popup__text-name">
+        <input type="text" placeholder="Вид деятельности" class="popup__text popup__text-info">
+        <button id="popup__save-button" type="submit" class="popup__save-button">Сохранить</button>
       </form>
-      <button class="popup__close-button" type="button"></button>
+      <button id="popup__close-button" type="button" class="popup__close-button"></button>
     </div>
-  </section>
+  </div>
 
-  <div class="popup" id="add-popup">
+  <div id="add-popup" class="popup">
     <div class="popup__container">
       <h2 class="popup__title">Новое место</h2>
-      <form id="FormAdd" action="" name="FormAdd" class="popup__fields">
-        <input name="Imgname" type="text" id="Name" placeholder="Название" class="popup__text popup__text_form_name">
-        <input name="Imgurl" type="url" id="Link" placeholder="Ссылка на картинку"
-          class="popup__text popup__text_form_img">
-        <button id="add-popup__save-button" type="submit" class="popup__save-button">Создать</button>
+      <form id="addform" name="addform" class="popup__fields">
+        <input id="name" name="imgname" placeholder="Название" class="popup__text popup__text-name" type="text">
+        <input id="link" name="imgurl" type="url" placeholder="Ссылка на картинку" class="popup__text popup__text-img">
+        <button id="add-popup__save-button" class="popup__save-button" type="submit">Создать</button>
       </form>
       <button id="add-popup__close-button" type="button" class="popup__close-button"></button>
     </div>
   </div>
 
-  <div class="popup" id="img-popup">
+  <div id="img-popup" class="popup">
     <div class="popup__img">
       <img class="popup__image">
       <p class="popup__image-name"></p>
-      <button id="img-popup__close-button" type="button" class="popup__close-button"></button>
+      <button id='img-popup__close-button' class="popup__close-button" type="button"></button>
     </div>
   </div>
 
@@ -79,6 +78,7 @@
     </div>
   </template>
   <script src="./scripts/index.js"></script>
+
 </body>
 
 </html>
