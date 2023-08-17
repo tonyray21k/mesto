@@ -112,7 +112,7 @@ function createElement(name, link) {
 
   return cardElement;
 }
-
+// https://youtu.be/F5Q57_SJjk0?t=13
 popupEditProfile.querySelector('.popup__close-button').addEventListener('click', function () {
   closePopup(popupEditProfile);
 });
