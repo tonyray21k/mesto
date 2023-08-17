@@ -37,7 +37,6 @@ const buttonCloseEditProfile = popupEditProfile.querySelector(".popup__close-but
 const popupInfo = popupEditProfile.querySelector(".popup__text-info");
 const elementForm = popupEditProfile.querySelector(".popup__fields");
 const popupNameEditProfile = popupEditProfile.querySelector(".popup__text-name");
-const form = popupEditProfile.querySelector("#popup-form");
 const popupAdd = document.querySelector("#add-popup");
 const elementImg = popupAdd.querySelector(".popup__text-img");
 const formAdd = popupAdd.querySelector("#addform");
@@ -61,7 +60,7 @@ function closePopup(popup) {
 }
 
 
-function EditFormSubmit(evt) {
+function FormEditProfile(evt) {
   evt.preventDefault();
   info.textContent = popupInfo.value;
   profileName.textContent = popupNameEditProfile.value;
@@ -70,7 +69,7 @@ function EditFormSubmit(evt) {
 function editPopupOpen() {
   popupNameEditProfile.value = profileName.textContent;
   popupInfo.value = info.textContent;
-  popupEditProfile.classList.add('popup_opened');
+  openPopup(popupEditProfile);
 }
 
 function addElement(evt) {
@@ -84,31 +83,30 @@ const renderElements = (name, link) => {
   elements.prepend(createElement(name, link));
 }
 
-function returnElement(name, link) {
-  const cardElement = elementsTemplate.querySelector('.elements__element').cloneNode(true);
-  cardElement.querySelector('.elements__card-name').textContent = name;
-  cardElement.querySelector('.elements__pic').alt = name;
-  cardElement.querySelector('.elements__pic').src = link;
-  return cardElement;
-}
-
 function createElement(name, link) {
+  function returnElement(name, link) {
+    const cardElement = elementsTemplate.querySelector('.elements__element').cloneNode(true);
+    cardElement.querySelector('.elements__card-name').textContent = name;
+    cardElement.querySelector('.elements__pic').alt = name;
+    cardElement.querySelector('.elements__pic').src = link;
+    return cardElement;
+  }
+
   const cardElement = returnElement(name, link);
 
   const likeButton = cardElement.querySelector('.elements__card-button');
-  likeButton.addEventListener('click', () => {
+  likeButton.addEventListener('click', function () {
     likeButton.classList.toggle('elements__card-button_active');
   });
-
-  cardElement.querySelector('.elements__delete-button').addEventListener('click', () => {
-    cardElement.remove();
-  });
-
-  cardElement.querySelector('.elements__pic').addEventListener('click', () => {
+  cardElement.querySelector('.elements__pic').addEventListener('click', function () {
     imgName.textContent = name;
     img.src = link;
     img.alt = name;
     openPopup(imgPopup);
+  });
+
+  cardElement.querySelector('.elements__delete-button').addEventListener('click', function () {
+    cardElement.remove();
   });
 
   return cardElement;
@@ -137,4 +135,4 @@ elements.prepend.apply(elements, defaultCards);
 
 buttonEditProfile.addEventListener('click', editPopupOpen)
 formAdd.addEventListener('submit', addElement);
-elementForm.addEventListener('submit', EditFormSubmit);
+elementForm.addEventListener('submit', FormEditProfile);
