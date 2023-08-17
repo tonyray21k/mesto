@@ -60,7 +60,7 @@ function closePopup(popup) {
 }
 
 
-function FormEditProfile(evt) {
+function EditFormProfile(evt) {
   evt.preventDefault();
   info.textContent = popupInfo.value;
   profileName.textContent = popupNameEditProfile.value;
@@ -83,30 +83,31 @@ const renderElements = (name, link) => {
   elements.prepend(createElement(name, link));
 }
 
-function createElement(name, link) {
-  function returnElement(name, link) {
-    const cardElement = elementsTemplate.querySelector('.elements__element').cloneNode(true);
-    cardElement.querySelector('.elements__card-name').textContent = name;
-    cardElement.querySelector('.elements__pic').alt = name;
-    cardElement.querySelector('.elements__pic').src = link;
-    return cardElement;
-  }
+function returnElement(name, link) {
+  const cardElement = elementsTemplate.querySelector('.elements__element').cloneNode(true);
+  cardElement.querySelector('.elements__card-name').textContent = name;
+  cardElement.querySelector('.elements__pic').src = link;
+  cardElement.querySelector('.elements__pic').alt = name;
+  return cardElement;
+}
 
+function createElement(name, link) {
   const cardElement = returnElement(name, link);
 
   const likeButton = cardElement.querySelector('.elements__card-button');
-  likeButton.addEventListener('click', function () {
+  likeButton.addEventListener('click', () => {
     likeButton.classList.toggle('elements__card-button_active');
   });
-  cardElement.querySelector('.elements__pic').addEventListener('click', function () {
+
+  cardElement.querySelector('.elements__delete-button').addEventListener('click', () => {
+    cardElement.remove();
+  });
+
+  cardElement.querySelector('.elements__pic').addEventListener('click', () => {
     imgName.textContent = name;
     img.src = link;
     img.alt = name;
     openPopup(imgPopup);
-  });
-
-  cardElement.querySelector('.elements__delete-button').addEventListener('click', function () {
-    cardElement.remove();
   });
 
   return cardElement;
@@ -135,4 +136,4 @@ elements.prepend.apply(elements, defaultCards);
 
 buttonEditProfile.addEventListener('click', editPopupOpen)
 formAdd.addEventListener('submit', addElement);
-elementForm.addEventListener('submit', FormEditProfile);
+elementForm.addEventListener('submit', EditFormProfile);
