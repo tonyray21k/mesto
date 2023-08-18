@@ -60,7 +60,7 @@ function closePopup(popup) {
 }
 
 
-function EditFormProfile(evt) {
+function editFormProfile(evt) {
   evt.preventDefault();
   info.textContent = popupInfo.value;
   profileName.textContent = popupNameEditProfile.value;
@@ -82,17 +82,12 @@ function addElement(evt) {
 const renderElements = (name, link) => {
   elements.prepend(createElement(name, link));
 }
-
-function returnElement(name, link) {
+// когда переделываешь одно и тоже когда ф-ал не меняется хм https://www.youtube.com/watch?v=J__y--2OnDs&ab_channel=sashaghoster
+function createElement(name, link) {
   const cardElement = elementsTemplate.querySelector('.elements__element').cloneNode(true);
   cardElement.querySelector('.elements__card-name').textContent = name;
   cardElement.querySelector('.elements__pic').src = link;
   cardElement.querySelector('.elements__pic').alt = name;
-  return cardElement;
-}
-
-function createElement(name, link) {
-  const cardElement = returnElement(name, link);
 
   const likeButton = cardElement.querySelector('.elements__card-button');
   likeButton.addEventListener('click', () => {
@@ -112,7 +107,7 @@ function createElement(name, link) {
 
   return cardElement;
 }
-// https://youtu.be/F5Q57_SJjk0?t=13
+
 popupEditProfile.querySelector('.popup__close-button').addEventListener('click', function () {
   closePopup(popupEditProfile);
 });
@@ -136,4 +131,4 @@ elements.prepend.apply(elements, defaultCards);
 
 buttonEditProfile.addEventListener('click', editPopupOpen)
 formAdd.addEventListener('submit', addElement);
-elementForm.addEventListener('submit', EditFormProfile);
+elementForm.addEventListener('submit', editFormProfile);
