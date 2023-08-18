@@ -51,3 +51,4 @@
 @import url(../blocks/popup/__image-name/popup__image-name.css);
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__img/popup__img.css);
+@import url(../blocks/popup/_opacity/popup_opacity.css);

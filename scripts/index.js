@@ -82,7 +82,6 @@ function addElement(evt) {
 const renderElements = (name, link) => {
   elements.prepend(createElement(name, link));
 }
-// когда переделываешь одно и тоже когда ф-ал не меняется хм https://www.youtube.com/watch?v=J__y--2OnDs&ab_channel=sashaghoster
 function createElement(name, link) {
   const cardElement = elementsTemplate.querySelector('.elements__element').cloneNode(true);
   cardElement.querySelector('.elements__card-name').textContent = name;
