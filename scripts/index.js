@@ -53,10 +53,27 @@ const imgName = imgPopup.querySelector(".popup__image-name");
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closePopupEscape)
+  popup.addEventListener('click', closePopupOverlay)
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closePopupEscape)
+  popup.removeEventListener('click', closePopupOverlay)
+}
+
+function closePopupEscape(evt) {
+  if (evt.key === "Escape") {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
+  }
+}
+
+function closePopupOverlay(evt) {
+  if (evt.currentTarget === evt.target) {
+    closePopup(evt.currentTarget)
+  }
 }
 
 
@@ -112,6 +129,8 @@ popupEditProfile.querySelector('.popup__close-button').addEventListener('click',
 });
 
 document.querySelector('.profile__button').addEventListener('click', function () {
+  newCardButton.classList.add(validationSettings.inactiveButtonClass);
+  newCardButton.disabled = true;
   openPopup(popupAdd);
 });
 
