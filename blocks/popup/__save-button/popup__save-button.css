@@ -9,11 +9,11 @@
   height: 50px;
   border: none;
   border-radius: 2px;
-  margin: 48px 0 0;
   padding: 0;
   cursor: pointer;
   color: #FFFFFF;
   background: #000000;
+  margin: 37px 0 26px 0;
 }
 
 .popup__save-button:hover {

@@ -1,10 +1,5 @@
-.popup__text:first-child {
-  margin-top: 54px;
-}
-
 .popup__text {
   width: 100%;
-  margin: 30px auto 0;
   border: none;
   font-family: 'Inter', 'Arial', sans-serif;
   font-style: normal;
@@ -12,7 +7,6 @@
   font-size: 14px;
   line-height: 17px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 0 0 13px;
 }
 
 
@@ -20,4 +14,24 @@
   .popup__text:first-child {
     margin-top: 75px;
   }
+}
+
+#link {
+  padding: 0 0 5px 0;
+  margin: 34px 0 6px 0;
+}
+
+#name {
+  padding: 0 0 13px 0;
+  margin: 0 0 7px 0;
+}
+
+#profile-info {
+  margin: 30px 0 0 0;
+  padding: 0 0 13px 0;
+}
+
+#profile-name {
+  margin: 0;
+  padding: 0 0 13px 0;
 }
